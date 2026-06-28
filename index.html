@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chip Market — a single shared screen for live-service game greenlight meetings. Spend chips, read the signal, settle the P&L.">
+  <title>Chip Market — Greenlight Prioritization</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%230b6b3a' stroke='%23f4c542' stroke-width='2' stroke-dasharray='4 3'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23f4c542' stroke-width='2'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+
+  <header class="app-header">
+    <div class="app-header__bar">
+      <div class="app-brand">
+        <span class="app-brand__chip" aria-hidden="true"></span>
+        <div class="app-brand__text">
+          <h1 class="app-brand__title">Chip Market</h1>
+          <p class="app-brand__subtitle">Greenlight prioritization, one shared screen</p>
+        </div>
+      </div>
+      <div class="app-metric" id="metric-label" aria-live="polite">
+        <span class="app-metric__caption">Settlement metric</span>
+        <span class="app-metric__value" id="metric-label-value">—</span>
+      </div>
+    </div>
+
+    <nav class="app-nav" aria-label="Screens">
+      <a class="app-nav__tab" data-route="setup" href="#/setup">Setup</a>
+      <a class="app-nav__tab" data-route="allocate" href="#/allocate">Allocate</a>
+      <a class="app-nav__tab" data-route="signal" href="#/signal">Signal</a>
+      <a class="app-nav__tab" data-route="settle" href="#/settle">Settle</a>
+      <a class="app-nav__tab" data-route="leaderboard" href="#/leaderboard">Leaderboard</a>
+    </nav>
+  </header>
+
+  <main id="app" class="app-main" tabindex="-1">
+    <noscript>
+      <p class="app-noscript">Chip Market needs JavaScript enabled. It runs entirely in your browser — no server, no accounts.</p>
+    </noscript>
+  </main>
+
+  <footer class="app-footer">
+    <p>Single shared screen — pass the device around: each player picks their name, spends their 100 chips, then hands it on.</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
